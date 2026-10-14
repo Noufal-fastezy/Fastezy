@@ -52,7 +52,6 @@ const BUSINESS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxKj0pAQ
   document.querySelectorAll("[data-slider]").forEach(function (slider) {
     const slides = Array.from(slider.querySelectorAll("[data-slide]"));
     const dots = Array.from(slider.querySelectorAll("[data-slide-dot]"));
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let current = 0;
     let timer;
     let paused = false;
@@ -69,7 +68,7 @@ const BUSINESS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxKj0pAQ
       });
     }
     function start() {
-      if (reduceMotion || timer || slides.length < 2) return;
+      if (timer || slides.length < 2) return;
       timer = window.setInterval(function () {
         if (!paused) showSlide(current + 1);
       }, 6000);
