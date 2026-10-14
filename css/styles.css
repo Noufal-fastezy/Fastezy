@@ -317,8 +317,9 @@ p {
   border-radius: var(--radius-image);
 }
 .hero-slider {
+  width: min(100% - 16px, var(--container-width));
   min-height: 520px;
-  margin-top: 16px;
+  margin-top: 0;
   background: var(--footer-bg);
 }
 .hero-slide {
@@ -1355,10 +1356,12 @@ p {
   }
   .hero-slider {
     min-height: 560px;
-    margin-top: 24px;
+    height: 560px;
+    margin-top: 0;
   }
   .hero-slide {
     min-height: 560px;
+    height: 560px;
   }
   .hero-slide__content {
     padding: 48px 56px 76px;
