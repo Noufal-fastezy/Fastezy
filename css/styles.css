@@ -317,7 +317,7 @@ p {
   border-radius: var(--radius-image);
 }
 .hero-slider {
-  width: min(100% - 16px, var(--container-width));
+  width: min(100%, var(--container-width));
   min-height: 520px;
   margin-top: 0;
   background: var(--footer-bg);
@@ -1410,10 +1410,11 @@ p {
     padding: 40px;
   }
   .setup-hero {
-    min-height: 680px;
+    height: min(680px, calc(100svh - var(--header-height)));
+    min-height: 0;
   }
   .setup-hero__image, .setup-hero__shade {
-    height: 680px;
+    height: 100%;
   }
   .setup-hero__image {
     object-position: left center;
@@ -1423,7 +1424,7 @@ p {
   }
   .setup-hero__content {
     width: min(100% - (var(--gutter) * 2), var(--container-width));
-    min-height: 680px;
+    min-height: 100%;
     margin-inline: auto;
     padding: 48px 0 80px;
   }
@@ -1444,16 +1445,45 @@ p {
   .setup-hero__form {
     position: absolute;
     top: 50%;
-    right: max(var(--gutter), calc((100% - var(--container-width)) / 2));
-    width: min(440px, calc(100% - (var(--gutter) * 2)));
+    right: calc(max(var(--gutter), calc((100% - var(--container-width)) / 2)) + 64px);
+    width: min(360px, calc(100% - (var(--gutter) * 2)));
     margin: 0;
     transform: translateY(-50%);
   }
   .setup-hero .form-panel {
-    padding: 32px;
+    padding: 18px;
+  }
+  .setup-hero .form-panel h2 {
+    margin-bottom: 6px;
+    font-size: 1.7rem;
+  }
+  .setup-hero .field {
+    gap: 3px;
+  }
+  .setup-hero .field label {
+    font-size: 0.65rem;
+  }
+  .setup-hero .field input, .setup-hero .field select {
+    height: 42px;
+  }
+  .setup-hero .phone-field {
+    height: 42px;
+  }
+  .setup-hero .phone-field select {
+    height: 30px !important;
+  }
+  .setup-hero .phone-field input {
+    height: 42px !important;
   }
   .setup-hero .form-grid {
-    row-gap: 16px;
+    row-gap: 8px;
+  }
+  .setup-hero__submit {
+    min-height: 42px;
+    margin-top: 10px;
+  }
+  .setup-hero .form-panel small {
+    margin-top: 8px;
   }
   .workspace-media {
     aspect-ratio: 21 / 9;
