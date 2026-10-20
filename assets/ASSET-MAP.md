@@ -5,7 +5,7 @@ All listed image assets are existing project files and are reused without replac
 | Asset | Current use | Default subject / alt text |
 |---|---|---|
 | `images/logo/FZE-logo.webp` | Header, footer and structured-data logo | FastEzy - Travel and Tourism |
-| `images/logo/FZE-favicon.png` | Browser and search favicon | Square crop of the current FastEzy logo |
+| `images/logo/FZE-favicon.svg` | Browser and search favicon | Current FastEzy favicon |
 | `images/hero-1.webp` | Home hero slide 1 | Colorful coastal town on a sunny day |
 | `images/hero-2.webp` | Home hero slide 2 | Passport and travel documents on a desk |
 | `images/hero-3.webp` | Home hero slide 3 | Tourists on a guided city tour |
